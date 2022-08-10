@@ -9,5 +9,3 @@
 4. criar .env
 5. python main.py ---> Executar local
 6. cxfreeze main.py --target-dir dist ---> Distribuir pacote
-
-=> Versao 0.1: estrutura basica do projeto
