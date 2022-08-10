@@ -1,13 +1,4 @@
--------- ZEUS SYSTEM MONITOR --------
+-------- ZEUS SYSTEM MONITOR V0.0.1 --------
 
--> Python 3.10.4
--> sqlite3
-
-1. python -m venv env
-2. source env/bin/activate
-3. pip install -r requirements.txt
-4. criar .env
-5. python main.py ---> Executar local
-6. cxfreeze main.py --target-dir dist ---> Distribuir pacote
-
-=> Versao 0.1: estrutura basica do projeto
+1. Crie o arquivo .env
+2. Para alterar configuracoes do ambiente apenas edite o arquivo cfg.sqlite3 gerado apos a primeira inicializacao
