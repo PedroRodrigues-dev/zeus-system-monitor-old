@@ -41,8 +41,8 @@ class monitor:
             return data.percent
     
     def monitoring(self, option):
-        percent_avg = self.switcher(option)
         while 1:
+            percent_avg = self.switcher(option)
             if percent_avg > self.percent_limit:
                     self.overload_counter += 1
             if self.overload_counter > self.overload_counter_limit and (time() - self.time_last_notification) > self.time_notification_limit:
