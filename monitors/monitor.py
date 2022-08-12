@@ -1,24 +1,15 @@
-import os
-import sqlite3
 from time import sleep, time
 from misc.database_actions import database_actions
 from misc.sending import notification
 import psutil
+import misc.variables as variables
 
 class monitor:
     def __init__(self, option):
         self.define_variables()
-        
         self.time_last_notification = time()
         self.overload_counter = 0 
-        
-        monitor_name = self.number_to_name(option)
-        self.time_notification_limit = int(self.enviroment['time_notification_limit'])
-        self.overload_counter_limit = int(self.enviroment[f'{monitor_name}_overload_counter_limit'])
-        self.percent_limit = int(self.enviroment[f'{monitor_name}_percent_limit'])
-        
-        self.notification_destination = self.enviroment['notification_destination'].split(',')
-        self.overload_message = self.enviroment[f'{monitor_name}_overload_message'].format(self.percent_limit)
+        self.monitor_name = self.number_to_name(option)
         self.monitoring(option)
         
     def number_to_name(self, option):
@@ -41,14 +32,17 @@ class monitor:
             return data.percent
     
     def monitoring(self, option):
-        while 1:
+        while variables.monitors_loop:
             percent_avg = self.switcher(option)
-            if percent_avg > self.percent_limit:
+            if percent_avg > int(self.enviroment[f'{self.monitor_name}_percent_limit']):
                     self.overload_counter += 1
-            if self.overload_counter > self.overload_counter_limit and (time() - self.time_last_notification) > self.time_notification_limit:
+            if self.overload_counter > int(self.enviroment[f'{self.monitor_name}_overload_counter_limit']) and (time() - self.time_last_notification) > int(self.enviroment['time_notification_limit']):
                 self.time_last_notification = time()
                 self.overload_counter = 0
-                notification(message=self.overload_message,destinations=self.notification_destination)
+                notification(message=self.enviroment[f'{self.monitor_name}_overload_message'].format(int(self.enviroment[f'{self.monitor_name}_percent_limit'])),destinations=self.enviroment['notification_destination'].split(','))
+            if(variables.define_monitors_variables):
+                self.define_variables()
+                variables.define_monitors_variables = False
             sleep(float(self.enviroment['thread_sleep_time']))
             
     def define_variables(self):
