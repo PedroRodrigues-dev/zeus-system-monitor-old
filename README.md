@@ -12,14 +12,6 @@
 - Envio de dados por amqp e armazenamento em log (configurável, padrão em log)
 - Interface de comando própria para alterar configurações do ambiente'
 
-<<<<<<< HEAD
-1. python -m venv env
-2. source env/bin/activate
-3. pip install -r requirements.txt
-4. criar .env
-5. python main.py ---> Executar local
-6. cxfreeze main.py --target-dir dist ---> Distribuir pacote
-=======
 ## Instalação e configuração
 ### Distribuição
 Apenas para linux
