@@ -1,7 +1,3 @@
-__pycache__
-env
-misc
-monitors
 cfg.sqlite3
 system.log
 .env
