@@ -1,7 +1,7 @@
 # ZEUS SYSTEM MONITOR V0.0.2
 ## _Sistema gerenciador de infraestrutura_
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=LICENÇA&message=MIT&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)</br>
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=LICENÇA&message=MIT&color=GREEN&style=for-the-badge)</br>
 **Free Software**
 ## Ferramentas para desenvolvimento
 - Python 3.10.4
@@ -20,7 +20,7 @@ Variáveis de ambiente
 ```sh
 cp .env.sample .env
 ```
-Inicialização.
+Inicialização
 ```sh
 ./main
 ```
@@ -37,7 +37,7 @@ python -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
-Inicialização.
+Inicialização
 ```sh
 python main.py
 ```
@@ -54,27 +54,27 @@ elas podem ser alteradas por meio do shell do sistema
 ```sh
 show
 ```
-Exibe todos os valores de ambiente seguindo o padrão abaixo.
-('time_notification_limit', '300')
-('notification_destination', 'logging')
-('cpu_overload_counter_limit', '30')
-('cpu_percent_limit', '90')
-('cpu_overload_message', 'CPU com utilizacao acima de {}%')
-('memory_overload_counter_limit', '30')
-('memory_percent_limit', '90')
-('memory_overload_message', 'Memoria com utilizacao acima de {}%')
-('disk_overload_counter_limit', '30')
-('disk_percent_limit', '90')
-('monitored_disk_location', '/')
-('disk_overload_message', 'Disco com utilizacao acima de {}%')
-('rabbit_host', 'localhost')
-('rabbit_queue', 'zeus')
+Exibe todos os valores de ambiente seguindo o padrão abaixo.</br>
+('time_notification_limit', '300')</br>
+('notification_destination', 'logging')</br>
+('cpu_overload_counter_limit', '30')</br>
+('cpu_percent_limit', '90')</br>
+('cpu_overload_message', 'CPU com utilizacao acima de {}%')</br>
+('memory_overload_counter_limit', '30')</br>
+('memory_percent_limit', '90')</br>
+('memory_overload_message', 'Memoria com utilizacao acima de {}%')</br>
+('disk_overload_counter_limit', '30')</br>
+('disk_percent_limit', '90')</br>
+('monitored_disk_location', '/')</br>
+('disk_overload_message', 'Disco com utilizacao acima de {}%')</br>
+('rabbit_host', 'localhost')</br>
+('rabbit_queue', 'zeus')</br>
 ('thread_sleep_time', '0.6')
 ```sh
 update
 ```
-Atualiza as variáveis.
-Digite o nome da variável e o valor e confirme que deseja realmente alterar.
+Atualiza as variáveis
+Digite o nome da variável e o valor e confirme que deseja realmente alterar
 
 **Por: Pedro Rodrigues**
 ![Badge Github](https://img.shields.io/github/followers/PedroRodrigues-dev?style=social)
