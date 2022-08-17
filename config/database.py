@@ -1,10 +1,9 @@
-import os
 import sqlite3
 from misc.database_actions import database_actions
 
 class sqlite:
     def __init__(self):
-        self.connection = sqlite3.connect(os.environ.get('database_name'))
+        self.connection = sqlite3.connect('cfg.sqlite3')
         self.cursor = self.connection.cursor()
         self.create_default()
         self.connection.commit()       
