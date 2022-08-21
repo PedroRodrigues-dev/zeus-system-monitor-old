@@ -1,6 +1,6 @@
 # ZEUS SYSTEM MONITOR V0.0.2
 ## _Sistema gerenciador de infraestrutura_
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=%20CANCELADO&color=GREY&style=for-the-badge)</br>
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=%20CANCELADO&color=GREEN&style=for-the-badge)</br>
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=LICENÇA&message=MIT&color=GREEN&style=for-the-badge)</br>
 **Free Software**
 ## Ferramentas para desenvolvimento

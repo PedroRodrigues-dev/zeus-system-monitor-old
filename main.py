@@ -6,15 +6,13 @@ from config.database import sqlite
 from misc.animations import animations
 from misc.shell import shell
 from monitors.monitor import monitor
-from dotenv import load_dotenv
 import misc.variables as variables
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')
     animations.start()
     print('Carregando variaveis de ambiente')
-    load_dotenv()
-    logging.basicConfig(filename=os.environ.get('log_file_name') ,format='%(asctime)s : [%(levelname)s] : %(message)s', level=logging.DEBUG)
+    logging.basicConfig(filename='system.log' ,format='%(asctime)s : [%(levelname)s] : %(message)s', level=logging.DEBUG)
     print('Iniciando banco de dados')
     sqlite()
     variables.define_monitors_variables = False

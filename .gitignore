@@ -3,4 +3,3 @@ env
 dist
 cfg.sqlite3
 system.log
-.env

@@ -1,4 +1,3 @@
-import os
 import sqlite3
 import misc.variables as variables
 
@@ -17,22 +16,22 @@ class database_actions:
             pass
     
     def find_config_values(name):
-        connection = sqlite3.connect(os.environ.get('database_name'))
+        connection = sqlite3.connect('cfg.sqlite3')
         cursor = connection.cursor()
         return cursor.execute(f"select value from config where name = '{name}'").fetchone()[0]
     
     def find_all_configs():
-        connection = sqlite3.connect(os.environ.get('database_name'))
+        connection = sqlite3.connect('cfg.sqlite3')
         cursor = connection.cursor()
         return cursor.execute('select * from config').fetchall()
     
     def find_one_config(name):
-        connection = sqlite3.connect(os.environ.get('database_name'))
+        connection = sqlite3.connect('cfg.sqlite3')
         cursor = connection.cursor()
         return cursor.execute(f"select * from config where name = '{name}'").fetchone()
     
     def update_config(name, value):
-        connection = sqlite3.connect(os.environ.get('database_name'))
+        connection = sqlite3.connect('cfg.sqlite3')
         cursor = connection.cursor()
         try:
             cursor.execute(f"update config set value = '{value}' where name = '{name}'")
